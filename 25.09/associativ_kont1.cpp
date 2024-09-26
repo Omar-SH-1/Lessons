@@ -1,22 +1,16 @@
 #include <iostream>
-#include <map>
+#include <unordered_map>
 #include <string>
 
 int main() {
-    std::map<std::string, int> data;
-    std::string key;
-    int value;
-
-    while (std::cin >> key >> value) {
-        data[key] = value;  
+    std::unordered_map<std::string, int> freqs;
+    freqs.reserve(2000000);
+    std::string word;
+     while (std::cin >> word) {
+        ++freqs[word];
     }
-
-    data.erase("hello"); 
-
-   
-    if (auto iter = data.find("test"); iter != data.end()) {
-        std::cout << "Found the key " << iter->first << " with the value " << iter->second << "\n";
-    } else {
-        std::cout << "Not found\n";
+    for (const auto& [word, freq] : freqs) {
+        std::cout << word << "\t" << freq << "\n";
     }
 }
+

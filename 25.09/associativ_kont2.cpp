@@ -1,9 +1,9 @@
 #include <iostream>
-#include <map>
+#include <unordered_map>
 #include <string>
 
 int main() {
-    std::map<std::string, int> freqs;
+    std::unordered_map<std::string, int> freqs;
     std::string word;
      while (std::cin >> word) {
         ++freqs[word];
