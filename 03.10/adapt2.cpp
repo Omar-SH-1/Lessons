@@ -7,7 +7,7 @@ int main() {
     std::priority_queue<
         int,
         std::vector<int>,   
-        std::greater<int>  
+        std::greater<int>
     > pq;
 
     for (int x : {3, 14, 15, 92, 6}) {

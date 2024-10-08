@@ -9,9 +9,9 @@ int main() {
         std::string line;
         std::getline(std::cin, line);
         lines.push_back(line);
-        for (auto item : lines) {
-			std::cout << item << "\n";  
-		}  
+          
     }
-   
+    for (auto item : lines) {
+        std::cout << item << "\n";  
+    }
 }
