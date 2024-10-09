@@ -7,8 +7,12 @@ bool IsAfternoonTime(const chron::Time& time) {
 
 
 int main() {
-    chron::Time t(100, 130, -90);
-    if (IsAfternoonTime(t)) {  
-        std::cout << t.GetHours() - 12 << "PM\n";
-    }
+    chron::Time t1 (10,19,10);
+     chron::Time t2 (10,19,10);
+     std::cout<<t1-t2<<"\n";
+     std::cout<<t1<<"\n";
+    t2.AddSeconds(2300);
+    std::cout<<t2.GetHours()<<"\n";
+    std::cout<<t2.GetMinutes()<<"\n";
+	std::cout<<t2.GetSeconds()<<"\n";
 }
